@@ -9,33 +9,33 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <h2 className={`text-3xl md:text-4xl font-bold text-center mb-4 ${isDarkMode ? 'text-white' : ''}`}>Powerful Features</h2>
         <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} text-center max-w-3xl mx-auto mb-16`}>
-          Everything you need to track, manage, and improve your financial health
+          Everything you need to forward, filter, and manage your messages
         </p>
 
-        {/* Budget Tracking Feature - Left text, right image */}
+        {/* Smart Filtering Feature - Left text, right image */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-24">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Budget Tracking</h3>
-            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-indigo-400' : 'text-indigo-600'}`}>Stay on top of your budget</h4>
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Smart Filtering</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-indigo-400' : 'text-indigo-600'}`}>Control what gets forwarded</h4>
             <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
-              Track your budgets with categories and spend limits. Get a clear overview of where your money goes and where to save.
+              Forward only the messages that matter with custom filters based on sender, content, or keywords. Keep the noise out.
             </p>
             <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <li className="flex items-center mb-2">
                 <div className="mr-2 text-indigo-500">•</div>
-                Set monthly spending targets
+                Filter by sender or content
               </li>
               <li className="flex items-center">
                 <div className="mr-2 text-indigo-500">•</div>
-                Track progress with visual indicators
+                Custom keyword matching
               </li>
             </ul>
           </div>
           <div className="md:w-1/2">
             <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
               <img 
-                src="/images/budget-screen.png" 
-                alt="Budget tracking interface" 
+                src="/images/smart-filtering.png" 
+                alt="Smart filtering interface" 
                 className="w-full h-auto"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -46,30 +46,30 @@ const FeaturesSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Transaction Logging Feature - Right text, left image */}
+        {/* Privacy Focused Feature - Right text, left image */}
         <div className="flex flex-col md:flex-row-reverse items-center justify-between mb-24">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
-            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Transaction Logging</h3>
-            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>Easily log every transaction</h4>
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Privacy Focused</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>Your data stays private</h4>
             <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
-              Upload images, PDFs, screenshots, or bank statements. Let our AI handle the rest automatically.
+              Your data never leaves your device. We don't store your messages on our servers or share them with third parties.
             </p>
             <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <li className="flex items-center mb-2">
                 <div className="mr-2 text-green-500">•</div>
-                Import from multiple sources
+                No cloud storage of messages
               </li>
               <li className="flex items-center">
                 <div className="mr-2 text-green-500">•</div>
-                Extract transaction details automatically
+                End-to-end encrypted forwarding
               </li>
             </ul>
           </div>
           <div className="md:w-1/2">
             <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
               <img 
-                src="/images/transaction-logging.png" 
-                alt="Transaction logging interface" 
+                src="/images/privacy.png" 
+                alt="Privacy features" 
                 className="w-full h-auto"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -80,34 +80,34 @@ const FeaturesSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Financial Reports Feature - Left text, right image */}
+        {/* Battery Efficient Feature - Left text, right image */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-24">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Financial Reports</h3>
-            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>Improves your finances</h4>
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Battery Efficient</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>Light on resources</h4>
             <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
-              Beautiful, easy-to-read reports with AI-powered categorization give you insights to make better financial decisions.
+              Designed to be light on resources while running in the background. Forward messages without draining your battery.
             </p>
             <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <li className="flex items-center mb-2">
                 <div className="mr-2 text-purple-500">•</div>
-                95%+ AI categorization accuracy
+                Optimized for low battery usage
               </li>
               <li className="flex items-center mb-2">
                 <div className="mr-2 text-purple-500">•</div>
-                Monthly and yearly breakdown
+                Intelligent background processing
               </li>
               <li className="flex items-center">
                 <div className="mr-2 text-purple-500">•</div>
-                Spending trend analysis
+                Minimal CPU utilization
               </li>
             </ul>
           </div>
           <div className="md:w-1/2">
             <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
               <img 
-                src="/images/financial-reports.png" 
-                alt="Financial reports interface" 
+                src="/images/battery-efficient.png" 
+                alt="Battery efficiency" 
                 className="w-full h-auto"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -118,30 +118,30 @@ const FeaturesSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Transaction History Feature - Right text, left image */}
+        {/* Easy Setup Feature - Right text, left image */}
         <div className="flex flex-col md:flex-row-reverse items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
-            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Transaction History</h3>
-            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-yellow-400' : 'text-yellow-600'}`}>All transactions in one place</h4>
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Easy Setup</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-yellow-400' : 'text-yellow-600'}`}>Ready in minutes</h4>
             <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
-              Organized, dark-mode friendly transaction history that makes it easy to track your spending on the go.
+              Configure your forwarding rules in minutes with our intuitive interface. No technical knowledge required.
             </p>
             <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <li className="flex items-center mb-2">
                 <div className="mr-2 text-yellow-500">•</div>
-                Edit and recategorize with ease
+                Simple guided setup
               </li>
               <li className="flex items-center">
                 <div className="mr-2 text-yellow-500">•</div>
-                Dark mode for comfortable viewing
+                Quick configuration of rules
               </li>
             </ul>
           </div>
           <div className="md:w-1/2">
             <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
               <img 
-                src="/images/transaction-history.png" 
-                alt="Transaction history interface" 
+                src="/images/easy-setup.png" 
+                alt="Easy setup interface" 
                 className="w-full h-auto"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -152,32 +152,32 @@ const FeaturesSection: React.FC = () => {
           </div>
         </div>
 
-        {/* AI-Powered Features Section */}
+        {/* Advanced Features Section */}
         <div className="mt-24 text-center">
-          <h2 className={`text-3xl md:text-4xl font-bold mb-12 ${isDarkMode ? 'text-white' : ''}`}>AI-Powered Financial Insights</h2>
+          <h2 className={`text-3xl md:text-4xl font-bold mb-12 ${isDarkMode ? 'text-white' : ''}`}>Advanced SMS Forwarding</h2>
           <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto mb-16`}>
-            Experience the power of AI in every aspect of your financial management
+            Professional features to make message forwarding powerful and flexible
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
-              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Save Hours Monthly</h3>
+              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Multiple Destinations</h3>
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Automatic categorization saves you hours of manual entry and organization every month.
+                Forward your messages to multiple devices, email addresses, or messaging apps simultaneously.
               </p>
             </div>
             
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
-              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>AI Categorization</h3>
+              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Custom Templates</h3>
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Our AI automatically categorizes your transactions with high accuracy.
+                Create custom message templates to format your forwarded messages exactly how you want them.
               </p>
             </div>
             
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
-              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Actionable Insights</h3>
+              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Automated Rules</h3>
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Get personalized insights and recommendations to improve your financial health.
+                Set up automated rules for different senders, time periods, or message types to stay organized.
               </p>
             </div>
           </div>
