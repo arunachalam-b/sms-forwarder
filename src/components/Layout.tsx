@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDarkMode } from './DarkModeContext';
+import { GOOGLE_PLAY_LINK } from '../constants/links';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -105,7 +106,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 SMS Forwarder
               </Link>
               <p className="mt-4 text-gray-400">
-                Easily forward important messages to any number with customizable filters.
+                Forward your important SMS messages to any number of filters using powerful, customizable filters.
               </p>
             </div>
             <div>
@@ -119,7 +120,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h3 className="text-xl font-semibold mb-4">Download</h3>
               <a
-                href="[Your Google Play Store Link]"
+                href={GOOGLE_PLAY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-gray-700 text-white hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors"
               >
                 Get it on Google Play

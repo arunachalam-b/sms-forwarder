@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDarkMode } from './DarkModeContext';
+import { GOOGLE_PLAY_LINK } from '../constants/links';
 
 const CTASection: React.FC = () => {
   const { isDarkMode } = useDarkMode();
@@ -12,7 +13,9 @@ const CTASection: React.FC = () => {
           Join thousands of users who are taking control of their messaging with our powerful forwarding app. Available on Android.
         </p>
         <a
-          href="[Your Google Play Store Link]"
+          href={GOOGLE_PLAY_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`inline-flex items-center justify-center ${isDarkMode ? 'bg-white/90 hover:bg-white' : 'bg-white hover:bg-gray-100'} text-indigo-600 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg`}
         >
           <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -20,13 +23,13 @@ const CTASection: React.FC = () => {
           </svg>
           Get it on Google Play
         </a>
-        <div className="flex justify-center mt-10 space-x-8">
+        {/* <div className="flex justify-center mt-10 space-x-8">
           <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>AT</div>
           <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>SC</div>
           <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>MR</div>
           <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>JD</div>
         </div>
-        <p className={`mt-4 ${isDarkMode ? 'text-indigo-300' : 'text-indigo-200'}`}>Joined by 5,000+ users worldwide</p>
+        <p className={`mt-4 ${isDarkMode ? 'text-indigo-300' : 'text-indigo-200'}`}>Joined by 5,000+ users worldwide</p> */}
       </div>
     </section>
   );

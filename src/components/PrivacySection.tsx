@@ -38,7 +38,7 @@ const PrivacySection: React.FC = () => {
               </li>
             </ul>
             <p className={`mt-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} italic`}>
-              "Other SMS apps can see everything in your messages and process them, whether you want them to or not."
+              "You'll become a victim of targeted ads and data breaches."
             </p>
           </div>
 
@@ -67,7 +67,7 @@ const PrivacySection: React.FC = () => {
               </li>
             </ul>
             <p className={`mt-6 ${isDarkMode ? 'text-indigo-300' : 'text-indigo-700'} italic`}>
-              "With SMS Forwarder, you decide what messages to forward, when to forward them, and keep complete control over your data."
+              "You own your data, privacy, and destiny."
             </p>
           </div>
         </div>

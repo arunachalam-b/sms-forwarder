@@ -10,6 +10,8 @@ import easySetupLight from '../images/5_light.png';
 import easySetupDark from '../images/5_dark.png';
 import advancedFeaturesLight from '../images/6_light.png';
 import advancedFeaturesDark from '../images/6_dark.png';
+import heroLightImg from '../images/1_light.png';
+import heroDarkImg from '../images/1_dark.png';
 
 const FeaturesSection: React.FC = () => {
   const { isDarkMode } = useDarkMode();
@@ -71,7 +73,7 @@ const FeaturesSection: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <div className="mr-2 text-green-500">•</div>
-                End-to-end encrypted forwarding
+                No data collection/tracking and sharing to 3rd parties
               </li>
             </ul>
           </div>
@@ -79,7 +81,7 @@ const FeaturesSection: React.FC = () => {
             <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
               <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
               <img 
-                src={privacyFocused}
+                src={isDarkMode ? heroDarkImg : heroLightImg}
                 alt="Privacy Focused Screenshot"
                 className="w-full h-full object-cover object-top pt-6"
               />
@@ -171,23 +173,23 @@ const FeaturesSection: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
-              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Multiple Destinations</h3>
+              {/* <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Multiple Destinations</h3> */}
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Forward your messages to multiple devices, email addresses, or messaging apps simultaneously.
+                Optimized for minimal battery impact with efficient message processing
               </p>
             </div>
             
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
-              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Custom Templates</h3>
+              {/* <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Custom Templates</h3> */}
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Create custom message templates to format your forwarded messages exactly how you want them.
+                Intelligent background processing that adapts to your device's state and network conditions
               </p>
             </div>
             
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
-              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Automated Rules</h3>
+              {/* <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Automated Rules</h3> */}
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Set up automated rules for different senders, time periods, or message types to stay organized.
+                Minimal CPU utilization with smart throttling and efficient resource management
               </p>
             </div>
           </div>

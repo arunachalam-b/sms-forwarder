@@ -3,6 +3,7 @@ import { useDarkMode } from './DarkModeContext';
 // Import the hero screenshots
 import heroLightImg from '../images/1_light.png';
 import heroDarkImg from '../images/1_dark.png';
+import { GOOGLE_PLAY_LINK } from '../constants/links';
 
 const HeroSection: React.FC = () => {
   const { isDarkMode } = useDarkMode();
@@ -20,7 +21,9 @@ const HeroSection: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://play.google.com/store/apps/details?id=com.example.auto_sms_2"
+                href={GOOGLE_PLAY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg"
               >
                 <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
