@@ -1,5 +1,8 @@
 import React from 'react';
 import { useDarkMode } from './DarkModeContext';
+// Import the hero screenshots
+import heroLightImg from '../images/1_light.png';
+import heroDarkImg from '../images/1_dark.png';
 
 const HeroSection: React.FC = () => {
   const { isDarkMode } = useDarkMode();
@@ -42,12 +45,9 @@ const HeroSection: React.FC = () => {
           <div className="md:w-1/2 relative">
             <div className={`relative z-10 rounded-xl shadow-2xl overflow-hidden ${isDarkMode ? 'border-8 border-gray-800' : 'border-8 border-white'} max-w-sm mx-auto`}>
               <img
-                src="/app-screenshot.png"
+                src={isDarkMode ? heroDarkImg : heroLightImg}
                 alt="SMS Forwarder App Screenshot"
                 className="w-full"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://placehold.co/240x480/indigo/white?text=SMS+Forwarder';
-                }}
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-72 h-72 bg-indigo-600 rounded-full opacity-10 z-0"></div>

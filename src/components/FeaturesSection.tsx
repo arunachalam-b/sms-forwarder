@@ -1,5 +1,15 @@
 import React from 'react';
 import { useDarkMode } from './DarkModeContext';
+// Import feature screenshots
+import smartFilteringLight from '../images/2_light.png';
+import smartFilteringDark from '../images/2_dark.png';
+import privacyFocused from '../images/3.png';
+import batteryEfficientLight from '../images/4_light.png';
+import batteryEfficientDark from '../images/4_dark.png';
+import easySetupLight from '../images/5_light.png';
+import easySetupDark from '../images/5_dark.png';
+import advancedFeaturesLight from '../images/6_light.png';
+import advancedFeaturesDark from '../images/6_dark.png';
 
 const FeaturesSection: React.FC = () => {
   const { isDarkMode } = useDarkMode();
@@ -34,12 +44,11 @@ const FeaturesSection: React.FC = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
               <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
-              <div className="flex justify-center items-center h-full pb-6 pt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
-                  <div className="text-lg mt-2 text-indigo-600">Smart Filtering</div>
-                </div>
-              </div>
+              <img 
+                src={isDarkMode ? smartFilteringDark : smartFilteringLight}
+                alt="Smart Filtering Screenshot"
+                className="w-full h-full object-cover object-top pt-6"
+              />
               <div className="absolute bottom-2 left-0 right-0 flex justify-center">
                 <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
               </div>
@@ -69,12 +78,11 @@ const FeaturesSection: React.FC = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
               <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
-              <div className="flex justify-center items-center h-full pb-6 pt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
-                  <div className="text-lg mt-2 text-green-600">Privacy Focused</div>
-                </div>
-              </div>
+              <img 
+                src={privacyFocused}
+                alt="Privacy Focused Screenshot"
+                className="w-full h-full object-cover object-top pt-6"
+              />
               <div className="absolute bottom-2 left-0 right-0 flex justify-center">
                 <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
               </div>
@@ -108,12 +116,11 @@ const FeaturesSection: React.FC = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
               <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
-              <div className="flex justify-center items-center h-full pb-6 pt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
-                  <div className="text-lg mt-2 text-purple-600">Battery Efficient</div>
-                </div>
-              </div>
+              <img 
+                src={isDarkMode ? batteryEfficientDark : batteryEfficientLight}
+                alt="Battery Efficient Screenshot"
+                className="w-full h-full object-cover object-top pt-6"
+              />
               <div className="absolute bottom-2 left-0 right-0 flex justify-center">
                 <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
               </div>
@@ -143,12 +150,11 @@ const FeaturesSection: React.FC = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
               <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
-              <div className="flex justify-center items-center h-full pb-6 pt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
-                  <div className="text-lg mt-2 text-yellow-600">Easy Setup</div>
-                </div>
-              </div>
+              <img 
+                src={isDarkMode ? easySetupDark : easySetupLight}
+                alt="Easy Setup Screenshot"
+                className="w-full h-full object-cover object-top pt-6"
+              />
               <div className="absolute bottom-2 left-0 right-0 flex justify-center">
                 <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
               </div>
@@ -163,7 +169,7 @@ const FeaturesSection: React.FC = () => {
             Professional features to make message forwarding powerful and flexible
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
               <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Multiple Destinations</h3>
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -183,6 +189,21 @@ const FeaturesSection: React.FC = () => {
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 Set up automated rules for different senders, time periods, or message types to stay organized.
               </p>
+            </div>
+          </div>
+          
+          {/* Advanced Features Screenshot */}
+          <div className="flex justify-center">
+            <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
+              <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
+              <img 
+                src={isDarkMode ? advancedFeaturesDark : advancedFeaturesLight}
+                alt="Advanced Features Screenshot"
+                className="w-full h-full object-cover object-top pt-6"
+              />
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
