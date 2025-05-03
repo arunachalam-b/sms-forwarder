@@ -31,17 +31,18 @@ const FeaturesSection: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="md:w-1/2">
-            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-              <img 
-                src="/images/smart-filtering.png" 
-                alt="Smart filtering interface" 
-                className="w-full h-auto"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
-                }}
-              />
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
+              <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
+              <div className="flex justify-center items-center h-full pb-6 pt-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
+                  <div className="text-lg mt-2 text-indigo-600">Smart Filtering</div>
+                </div>
+              </div>
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -65,17 +66,18 @@ const FeaturesSection: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="md:w-1/2">
-            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-              <img 
-                src="/images/privacy.png" 
-                alt="Privacy features" 
-                className="w-full h-auto"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
-                }}
-              />
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
+              <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
+              <div className="flex justify-center items-center h-full pb-6 pt-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
+                  <div className="text-lg mt-2 text-green-600">Privacy Focused</div>
+                </div>
+              </div>
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -103,17 +105,18 @@ const FeaturesSection: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="md:w-1/2">
-            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-              <img 
-                src="/images/battery-efficient.png" 
-                alt="Battery efficiency" 
-                className="w-full h-auto"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
-                }}
-              />
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
+              <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
+              <div className="flex justify-center items-center h-full pb-6 pt-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
+                  <div className="text-lg mt-2 text-purple-600">Battery Efficient</div>
+                </div>
+              </div>
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -137,17 +140,18 @@ const FeaturesSection: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="md:w-1/2">
-            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
-              <img 
-                src="/images/easy-setup.png" 
-                alt="Easy setup interface" 
-                className="w-full h-auto"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
-                }}
-              />
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative w-64 h-[500px] rounded-[40px] shadow-xl border-8 border-gray-200 overflow-hidden bg-gray-100">
+              <div className="absolute top-0 w-full h-6 bg-gray-200 rounded-t-[32px]"></div>
+              <div className="flex justify-center items-center h-full pb-6 pt-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-500">SMS Forwarder</div>
+                  <div className="text-lg mt-2 text-yellow-600">Easy Setup</div>
+                </div>
+              </div>
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <div className="h-4 w-32 bg-gray-200 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
