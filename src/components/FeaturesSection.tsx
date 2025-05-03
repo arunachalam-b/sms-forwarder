@@ -9,56 +9,176 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <h2 className={`text-3xl md:text-4xl font-bold text-center mb-4 ${isDarkMode ? 'text-white' : ''}`}>Powerful Features</h2>
         <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} text-center max-w-3xl mx-auto mb-16`}>
-          Everything you need to forward, filter, and manage your messages
+          Everything you need to track, manage, and improve your financial health
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-start">
-            <div className={`${isDarkMode ? 'bg-indigo-800' : 'bg-indigo-100'} p-4 rounded-2xl mb-4 md:mb-0 md:mr-4`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className={`h-8 w-8 ${isDarkMode ? 'text-indigo-300' : 'text-indigo-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-            </div>
-            <div>
-              <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Smart Filtering</h3>
-              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Forward only the messages that matter with custom filters based on sender, content, or keywords. Keep the noise out.</p>
+        {/* Budget Tracking Feature - Left text, right image */}
+        <div className="flex flex-col md:flex-row items-center justify-between mb-24">
+          <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Budget Tracking</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-indigo-400' : 'text-indigo-600'}`}>Stay on top of your budget</h4>
+            <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
+              Track your budgets with categories and spend limits. Get a clear overview of where your money goes and where to save.
+            </p>
+            <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              <li className="flex items-center mb-2">
+                <div className="mr-2 text-indigo-500">•</div>
+                Set monthly spending targets
+              </li>
+              <li className="flex items-center">
+                <div className="mr-2 text-indigo-500">•</div>
+                Track progress with visual indicators
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-1/2">
+            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <img 
+                src="/images/budget-screen.png" 
+                alt="Budget tracking interface" 
+                className="w-full h-auto"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
+                }}
+              />
             </div>
           </div>
+        </div>
 
-          <div className="flex flex-col md:flex-row items-start">
-            <div className={`${isDarkMode ? 'bg-green-800' : 'bg-green-100'} p-4 rounded-2xl mb-4 md:mb-0 md:mr-4`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className={`h-8 w-8 ${isDarkMode ? 'text-green-300' : 'text-green-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Privacy Focused</h3>
-              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Your data never leaves your device. We don't store your messages on our servers or share them with third parties.</p>
+        {/* Transaction Logging Feature - Right text, left image */}
+        <div className="flex flex-col md:flex-row-reverse items-center justify-between mb-24">
+          <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Transaction Logging</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`}>Easily log every transaction</h4>
+            <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
+              Upload images, PDFs, screenshots, or bank statements. Let our AI handle the rest automatically.
+            </p>
+            <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              <li className="flex items-center mb-2">
+                <div className="mr-2 text-green-500">•</div>
+                Import from multiple sources
+              </li>
+              <li className="flex items-center">
+                <div className="mr-2 text-green-500">•</div>
+                Extract transaction details automatically
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-1/2">
+            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <img 
+                src="/images/transaction-logging.png" 
+                alt="Transaction logging interface" 
+                className="w-full h-auto"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
+                }}
+              />
             </div>
           </div>
+        </div>
 
-          <div className="flex flex-col md:flex-row items-start">
-            <div className={`${isDarkMode ? 'bg-purple-800' : 'bg-purple-100'} p-4 rounded-2xl mb-4 md:mb-0 md:mr-4`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className={`h-8 w-8 ${isDarkMode ? 'text-purple-300' : 'text-purple-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Battery Efficient</h3>
-              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Designed to be light on resources while running in the background. Forward messages without draining your battery.</p>
+        {/* Financial Reports Feature - Left text, right image */}
+        <div className="flex flex-col md:flex-row items-center justify-between mb-24">
+          <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Financial Reports</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`}>Improves your finances</h4>
+            <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
+              Beautiful, easy-to-read reports with AI-powered categorization give you insights to make better financial decisions.
+            </p>
+            <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              <li className="flex items-center mb-2">
+                <div className="mr-2 text-purple-500">•</div>
+                95%+ AI categorization accuracy
+              </li>
+              <li className="flex items-center mb-2">
+                <div className="mr-2 text-purple-500">•</div>
+                Monthly and yearly breakdown
+              </li>
+              <li className="flex items-center">
+                <div className="mr-2 text-purple-500">•</div>
+                Spending trend analysis
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-1/2">
+            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <img 
+                src="/images/financial-reports.png" 
+                alt="Financial reports interface" 
+                className="w-full h-auto"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
+                }}
+              />
             </div>
           </div>
+        </div>
 
-          <div className="flex flex-col md:flex-row items-start">
-            <div className={`${isDarkMode ? 'bg-yellow-800' : 'bg-yellow-100'} p-4 rounded-2xl mb-4 md:mb-0 md:mr-4`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className={`h-8 w-8 ${isDarkMode ? 'text-yellow-300' : 'text-yellow-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+        {/* Transaction History Feature - Right text, left image */}
+        <div className="flex flex-col md:flex-row-reverse items-center justify-between">
+          <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+            <h3 className={`text-2xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Transaction History</h3>
+            <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-yellow-400' : 'text-yellow-600'}`}>All transactions in one place</h4>
+            <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
+              Organized, dark-mode friendly transaction history that makes it easy to track your spending on the go.
+            </p>
+            <ul className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              <li className="flex items-center mb-2">
+                <div className="mr-2 text-yellow-500">•</div>
+                Edit and recategorize with ease
+              </li>
+              <li className="flex items-center">
+                <div className="mr-2 text-yellow-500">•</div>
+                Dark mode for comfortable viewing
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-1/2">
+            <div className={`rounded-2xl overflow-hidden shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <img 
+                src="/images/transaction-history.png" 
+                alt="Transaction history interface" 
+                className="w-full h-auto"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://placehold.co/240x480/indigo/white?text=SMS+Forwarder";
+                }}
+              />
             </div>
-            <div>
-              <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : ''}`}>Easy Setup</h3>
-              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Configure your forwarding rules in minutes with our intuitive interface. No technical knowledge required.</p>
+          </div>
+        </div>
+
+        {/* AI-Powered Features Section */}
+        <div className="mt-24 text-center">
+          <h2 className={`text-3xl md:text-4xl font-bold mb-12 ${isDarkMode ? 'text-white' : ''}`}>AI-Powered Financial Insights</h2>
+          <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto mb-16`}>
+            Experience the power of AI in every aspect of your financial management
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Save Hours Monthly</h3>
+              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                Automatic categorization saves you hours of manual entry and organization every month.
+              </p>
+            </div>
+            
+            <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>AI Categorization</h3>
+              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                Our AI automatically categorizes your transactions with high accuracy.
+              </p>
+            </div>
+            
+            <div className={`p-8 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg`}>
+              <h3 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>Actionable Insights</h3>
+              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                Get personalized insights and recommendations to improve your financial health.
+              </p>
             </div>
           </div>
         </div>
