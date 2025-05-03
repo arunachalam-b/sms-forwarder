@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDarkMode } from './DarkModeContext';
 import { GOOGLE_PLAY_LINK } from '../constants/links';
+import Logo from '../images/Logo.png';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,10 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-sm fixed w-full top-0 z-50 transition-colors`}>
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold text-indigo-600 flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
-              <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
-            </svg>
+            <img src={Logo} alt="SMS Forwarder Logo" className="h-8 w-auto mr-2" />
             SMS Forwarder
           </Link>
           
@@ -99,10 +97,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <Link to="/" className="text-2xl font-bold text-indigo-400 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
-                  <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
-                </svg>
+                <img src={Logo} alt="SMS Forwarder Logo" className="h-7 w-auto mr-2" />
                 SMS Forwarder
               </Link>
               <p className="mt-4 text-gray-400">
