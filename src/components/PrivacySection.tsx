@@ -22,12 +22,6 @@ const PrivacySection: React.FC = () => {
                 <svg className="w-6 h-6 text-red-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
-                <span className={isDarkMode ? 'text-gray-300' : ''}>Access all your messages without explicit permission</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-6 h-6 text-red-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
                 <span className={isDarkMode ? 'text-gray-300' : ''}>May store your message data on their servers</span>
               </li>
               <li className="flex items-start">
@@ -40,11 +34,11 @@ const PrivacySection: React.FC = () => {
                 <svg className="w-6 h-6 text-red-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
-                <span className={isDarkMode ? 'text-gray-300' : ''}>Continue tracking in background without your knowledge</span>
+                <span className={isDarkMode ? 'text-gray-300' : ''}>Continue tracking in background and target you with personalized ads</span>
               </li>
             </ul>
             <p className={`mt-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} italic`}>
-              "Other SMS apps can see everything in your messages, whether you want them to or not."
+              "Other SMS apps can see everything in your messages and process them, whether you want them to or not."
             </p>
           </div>
 
@@ -57,13 +51,7 @@ const PrivacySection: React.FC = () => {
                 <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span className={isDarkMode ? 'text-gray-300' : ''}>Only accesses messages when you grant permission</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span className={isDarkMode ? 'text-gray-300' : ''}>All data stays locally on your device</span>
+                <span className={isDarkMode ? 'text-gray-300' : ''}>Works offline - All data stays locally on your device</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

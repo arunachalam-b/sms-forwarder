@@ -13,14 +13,14 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} leading-tight mb-6`}>
-              Take Control of Your <span className="text-indigo-600">SMS</span> with AI
+              Auto forward your <span className="text-indigo-600">SMS</span> with confidence
             </h1>
             <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-8 leading-relaxed`}>
-              Forward important messages, auto-filter spam, and simplify your messaging with SMS Forwarder
+              Forward important messages matching your filters, and simplify your messaging with SMS Forwarder. 100% Open Source. 
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="[Your Google Play Store Link]"
+                href="https://play.google.com/store/apps/details?id=com.example.auto_sms_2"
                 className="inline-flex items-center justify-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg"
               >
                 <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -35,12 +35,12 @@ const HeroSection: React.FC = () => {
                 Learn More
               </a>
             </div>
-            <div className="mt-8 flex items-center text-gray-500">
+            {/* <div className="mt-8 flex items-center text-gray-500">
               <div className="flex mr-4">
                 <span className="text-yellow-400">★★★★★</span>
               </div>
               <span>4.7 (250+) | 5,000+ happy users</span>
-            </div>
+            </div> */}
           </div>
           <div className="md:w-1/2 relative">
             <div className={`relative z-10 rounded-xl shadow-2xl overflow-hidden ${isDarkMode ? 'border-8 border-gray-800' : 'border-8 border-white'} max-w-sm mx-auto`}>
