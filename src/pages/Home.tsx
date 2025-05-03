@@ -260,7 +260,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-indigo-600 text-white">
+      <section className={`py-20 ${isDarkMode ? 'bg-indigo-900' : 'bg-indigo-600'} text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Forwarding Smarter. Download SMS Forwarder Today.</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto">
@@ -276,12 +276,12 @@ const Home: React.FC = () => {
             Get it on Google Play
           </a>
           <div className="flex justify-center mt-10 space-x-8">
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">AT</div>
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">SC</div>
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">MR</div>
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">JD</div>
+            <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>AT</div>
+            <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>SC</div>
+            <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>MR</div>
+            <div className={`w-10 h-10 ${isDarkMode ? 'bg-indigo-800' : 'bg-white/20'} rounded-full flex items-center justify-center`}>JD</div>
           </div>
-          <p className="mt-4 text-indigo-200">Joined by 5,000+ users worldwide</p>
+          <p className={`mt-4 ${isDarkMode ? 'text-indigo-300' : 'text-indigo-200'}`}>Joined by 5,000+ users worldwide</p>
         </div>
       </section>
     </div>
