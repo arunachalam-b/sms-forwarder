@@ -11,9 +11,15 @@ export const DarkModeProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
+    // Check if it's night time (between 6 PM and 6 AM)
+    const currentHour = new Date().getHours();
+    const isNightTime = currentHour >= 18 || currentHour < 6;
+    
     // Check user preference for dark mode
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(prefersDark);
+    
+    // Set dark mode based on time of day or user preference
+    setIsDarkMode(isNightTime || prefersDark);
   }, []);
 
   useEffect(() => {
